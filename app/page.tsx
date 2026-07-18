@@ -1,8 +1,3 @@
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">Innox Flyers is Live</h1>
-      <p className="mt-4">Welcome to the site</p>
-    </main>
-  )
+  return <h1 style={{textAlign:'center', fontSize:'48px'}}>Innox Flyers is Live 🚀</h1>
 }
