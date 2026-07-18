@@ -1,13 +1,8 @@
-export const dynamic = 'force-dynamic'
-
-import { UserButton } from "@clerk/nextjs";
-
 export default function Home() {
   return (
-    <main style={{padding: '50px', textAlign: 'center', fontFamily: 'system-ui'}}>
-      <h1 style={{fontSize: '48px', marginBottom: '10px'}}>Innox Flyers is Live!</h1>
-      <p style={{fontSize: '18px', marginBottom: '30px'}}>Site is back up 🚀</p>
-      <UserButton afterSignOutUrl="/" />
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <h1 className="text-4xl font-bold">Innox Flyers is Live</h1>
+      <p className="mt-4">Welcome to the site</p>
     </main>
   )
 }
