@@ -1,22 +1,16 @@
-export default function DashboardPage() {
+export default function HomePage() {
   return (
-    <main style={{background:'black', color:'white', padding:'20px', minHeight:'100vh'}}>
-      <h1 style={{fontSize:'28px', fontWeight:'bold'}}>Welcome Back ✈️</h1>
-
-      <div style={{background:'green', padding:'20px', borderRadius:'16px', margin:'20px 0'}}>
-        <p>Balance</p>
-        <p style={{fontSize:'32px', fontWeight:'bold'}}>₦0</p>
-      </div>
-
-      <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'16px'}}>
-        <div style={{background:'#111', padding:'20px', borderRadius:'16px'}}>
-          <p>🚗</p>
-          <p style={{fontWeight:'bold'}}>20 Cars</p>
-        </div>
-        <div style={{background:'#111', padding:'20px', borderRadius:'16px'}}>
-          <p>🚁</p>
-          <p style={{fontWeight:'bold'}}>Helispace</p>
-        </div>
+    <main style={{background:'#000', color:'#fff', minHeight:'100vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:'24px'}}>
+      <h1 style={{fontSize:'48px', fontWeight:'bold', marginBottom:'16px'}}>Innox Flyers ✈️</h1>
+      <p style={{fontSize:'18px', color:'#aaa', marginBottom:'40px'}}>Cars, Helicopters, and Airport Pickups</p>
+      
+      <div style={{display:'flex', gap:'16px'}}>
+        <a href="/login" style={{background:'#16a34a', padding:'16px 32px', borderRadius:'12px', fontWeight:'bold', textDecoration:'none', color:'#fff'}}>
+          Sign In
+        </a>
+        <a href="/signup" style={{background:'#111', padding:'16px 32px', borderRadius:'12px', fontWeight:'bold', textDecoration:'none', color:'#fff', border:'1px solid #333'}}>
+          Sign Up
+        </a>
       </div>
     </main>
   )
