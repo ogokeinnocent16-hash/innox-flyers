@@ -1,33 +1,23 @@
-import { UserButton } from "@clerk/nextjs"
-
 export default function DashboardPage() {
   return (
-    <div className="min-h-screen bg-black text-white p-6 pb-20">
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">Welcome Back ✈️</h1>
-        <UserButton />
+    <main style={{background:'black', color:'white', padding:'20px', minHeight:'100vh'}}>
+      <h1 style={{fontSize:'28px', fontWeight:'bold'}}>Welcome Back ✈️</h1>
+
+      <div style={{background:'green', padding:'20px', borderRadius:'16px', margin:'20px 0'}}>
+        <p>Balance</p>
+        <p style={{fontSize:'32px', fontWeight:'bold'}}>₦0</p>
       </div>
 
-      {/* Balance Card */}
-      <div className="bg-green-600 rounded-2xl p-6 mb-6">
-        <p className="text-sm opacity-80">Balance</p>
-        <p className="text-4xl font-bold">₦0</p>
-      </div>
-
-      {/* Service Cards */}
-      <div className="grid grid-cols-2 gap-4">
-        <div className="bg-gray-900 p-6 rounded-2xl">
-          <p className="text-3xl mb-2">🚗</p>
-          <p className="font-bold text-lg">20 Cars</p>
-          <p className="text-sm text-gray-400">Book airport pickup</p>
+      <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'16px'}}>
+        <div style={{background:'#111', padding:'20px', borderRadius:'16px'}}>
+          <p>🚗</p>
+          <p style={{fontWeight:'bold'}}>20 Cars</p>
         </div>
-
-        <div className="bg-gray-900 p-6 rounded-2xl">
-          <p className="text-3xl mb-2">🚁</p>
-          <p className="font-bold text-lg">Helispace</p>
-          <p className="text-sm text-gray-400">Book helicopter rides</p>
+        <div style={{background:'#111', padding:'20px', borderRadius:'16px'}}>
+          <p>🚁</p>
+          <p style={{fontWeight:'bold'}}>Helispace</p>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
