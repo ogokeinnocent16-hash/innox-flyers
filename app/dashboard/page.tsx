@@ -1,27 +1,41 @@
+import { UserButton } from "@clerk/nextjs"
+import Link from "next/link"
+
 export default function DashboardPage() {
   return (
-    <main style={{padding: "30px", fontFamily: "sans-serif", background: "#fff", minHeight: "100vh"}}>
-      <h1 style={{fontSize: "28px", marginBottom: "20px"}}>Welcome to INNOX FLYERS ✈️</h1>
-
-      {/* BALANCE CARD */}
-      <div style={{background: "#000", color: "#fff", padding: "24px", borderRadius: "20px", marginBottom: "20px"}}>
-        <p style={{margin: 0, fontSize: "14px", opacity: 0.7}}>Balance</p>
-        <h2 style={{margin: "8px 0 0 0", fontSize: "36px"}}>₦0</h2>
+    <div className="min-h-screen bg-black text-white p-6">
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold">Welcome Back ✈️</h1>
+        <UserButton />
       </div>
 
-      {/* CARS CARD */}
-      <div style={{background: "#f5f5f5", padding: "24px", borderRadius: "20px", marginBottom: "20px"}}>
-        <div style={{fontSize: "32px"}}>🚗</div>
-        <h3>20 Cars</h3>
-        <p>Book airport pickup and rides instantly</p>
+      {/* Balance Card */}
+      <div className="bg-green-600 rounded-2xl p-6 mb-6">
+        <p className="text-sm opacity-80">Balance</p>
+        <p className="text-4xl font-bold">₦0</p>
       </div>
 
-      {/* HELISPACE CARD */}
-      <div style={{background: "#f5f5f5", padding: "24px", borderRadius: "20px"}}>
-        <div style={{fontSize: "32px"}}>🚁</div>
-        <h3>Helispace</h3>
-        <p>Book helicopter rides across Lagos</p>
+      {/* Service Cards */}
+      <div className="grid grid-cols-2 gap-4 mb-6">
+        <Link href="/book-car" className="bg-gray-900 p-6 rounded-2xl hover:bg-gray-800">
+          <p className="text-3xl mb-2">🚗</p>
+          <p className="font-bold text-lg">20 Cars</p>
+          <p className="text-sm text-gray-400">Book airport pickup</p>
+        </Link>
+
+        <Link href="/book-heli" className="bg-gray-900 p-6 rounded-2xl hover:bg-gray-800">
+          <p className="text-3xl mb-2">🚁</p>
+          <p className="font-bold text-lg">Helispace</p>
+          <p className="text-sm text-gray-400">Book helicopter rides</p>
+        </Link>
       </div>
-    </main>
+
+      {/* Bottom Nav placeholder */}
+      <div className="fixed bottom-0 left-0 right-0 bg-gray-900 p-4 flex justify-around">
+        <p>Home</p>
+        <p>Trips</p>
+        <p>Profile</p>
+      </div>
+    </div>
   )
 }
